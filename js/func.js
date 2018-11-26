@@ -5,7 +5,7 @@ var glob_netid="";
 var glob_standing="";
 var glob_area="";
 var glob_data;
-var BACK_END_LOC = "http://10.192.42.72:7777/cs_scheduler/";
+var BACK_END_LOC = "http://182.220.149.166:7777/cs_scheduler/";
 
 function init(name,netid,standing,area,data){
 	//elems = data length
