@@ -1,1 +1,4 @@
 *.html linguist-vendored
+fonts/* linguist-vendored
+vendor/* linguist-vendored
+css/* linguist-vendored
