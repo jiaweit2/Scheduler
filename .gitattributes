@@ -1,3 +1,4 @@
 fonts/* linguist-vendored
 vendor/* linguist-vendored
 css/* linguist-vendored
+*.html linguist-vendored=false
