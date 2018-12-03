@@ -1,17 +1,154 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #ECBFBA;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #EC8580;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #fff;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(85px);
+  -ms-transform: translateX(85px);
+  transform: translateX(85px);
+}
+
+/*------ ADDED CSS ---------*/
+.on
+{
+  display: none;
+}
+
+.on, .off
+{
+  color: black;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  font-size: 11px;
+  font-family: Poppins-Regular;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;/* Safari */
+  -khtml-user-select: none;
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                        supported by Chrome and Opera */
+}
+
+input:checked+ .slider .on
+{display: block;}
+
+input:checked + .slider .off
+{display: none;}
+
+/*--------- END --------*/
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;}
+
+
+
+/*switch above*/
+
+
+.return{
+  float: right;
+  cursor: pointer;
+}
+#overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #C2446A;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+#inside_overlay{
+  color: white;
+  font-family: Poppins-Regular;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
 .del{
   border:none !important;
   width:1px;
   opacity: 0;
   transition: opacity 0.3s;
   cursor: pointer;
+  display: inline-block;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;/* Safari */
+  -khtml-user-select: none;
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                        supported by Chrome and Opera */
 }
 .btn:focus,.btn:active {
    outline: none !important;
    box-shadow: none;
 }
 #courses{
-  float:left;
+  float:center;
   width:530px;
+}
+#courses2{
+  float:left;
+  width:400px;
+  margin-left: 50px;
+}
+#courses3{
+  float:left;
+  width:400px;
+  margin-left: 50px;
 }
 table.table {
     /*table-layout: fixed;*/
@@ -19,6 +156,7 @@ table.table {
 }
 table.table tr th, table.table tr td {
     border-color: #e9e9e9;
+    word-wrap: break-word;
 }
 table.table th i {
     font-size: 13px;
@@ -208,7 +346,7 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: rgba(255,255,255,0.8);
+  /*background: rgba(255,255,255,0.8);*/
   
 }
 
@@ -222,7 +360,10 @@ iframe {
   border-radius: 10px;
   overflow: hidden;
   padding: 72px 55px 65px 55px;
+  opacity: 0.85;
+  transition: opacity .2s ease-in-out;
 }
+
 
 
 /*------------------------------------------------------------------
@@ -242,8 +383,24 @@ iframe {
   text-transform: uppercase;
   padding-bottom: 70px;
 }
-
-
+.contact3-form-title2 {
+  display: block;
+  font-family: Poppins-Bold;
+  font-size: 25px;
+  color: #fff;
+  line-height: 1;
+  text-align: center;
+}
+.contact3-form-title3 {
+  display: block;
+  font-family: Poppins-Bold;
+  font-size: 39px;
+  color: #fff;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
 
 /*------------------------------------------------------------------
 [  ]*/
@@ -323,7 +480,7 @@ textarea.input3 {
 
 .contact3-form-btn {
   font-family: Poppins-Medium;
-  font-size: 16px;
+  font-size: 14px;
   color: #555555;
   line-height: 1.2;
   text-transform: uppercase;
@@ -335,9 +492,9 @@ textarea.input3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 15px;
+  padding: 0 13px;
   min-width: 120px;
-  height: 50px;
+  height: 40px;
   border-radius: 2px;
   position: relative;
   z-index: 1;

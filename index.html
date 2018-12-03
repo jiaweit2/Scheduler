@@ -21,11 +21,14 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+ 	<link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/timetablejs.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src="js/timetable.js"></script>
 <!--===============================================================================================-->
 </head>
-<body>
+<body onload="check_status()">
 	<div class="bg-contact3" style="background-image: url('images/bg-01.jpg');">
 		<div class="container-contact3">
 			<div class="wrap-contact3" id="bigcontainer">
@@ -34,13 +37,13 @@
 						Who are you?
 					</span>
 
-					<div class="wrap-input3 validate-input" data-validate="Name is required">
+					<div class="wrap-input3 validate-input" data-validate="NetId is required">
 						<input class="input3" type="text" id="netid" name="name" placeholder="Your NetId">
 						<span class="focus-input3"></span>
 					</div>
 
 					<div class="container-contact3-form-btn">
-						<button class="contact3-form-btn" onclick="sub();return false;">
+						<button class="contact3-form-btn" type="submit">
 							Submit
 						</button>
 					</div>
@@ -66,7 +69,7 @@
 		});
 	</script>
 <!--===============================================================================================-->
-<script src="js/main.js"></script>
+	<script src="js/main.js"></script>
 
 </body>
 </html>
