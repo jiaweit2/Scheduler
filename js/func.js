@@ -410,8 +410,10 @@ function update_recommend(){
 			let title = course[3];
 			let instructor = course[2];
 			let time = course[8];
+			let gpa = course[6];
+			let in_rate = course[4];
 			let crn = course[0];
-			let p = '\''+course_number+'\',\''+title+'\',\''+instructor+'\',\''+time+'\',\''+crn+'\',\'major\'';
+			let p = '\''+course_number+'\',\''+title+'\',\''+instructor+'\',\''+time+'\',\''+crn+'\',\''+gpa+'\',\''+in_rate+'\',\'major\'';
 			str += '<tr style="cursor:pointer;" onclick="show_details('+p+')">'
 					+ '<td class="animated flipInX" style="animation-delay: 0.'+i+'s;">'+course_number+'</td>'
 					+ '<td class="animated flipInX" style="animation-delay: 0.'+i+'s;">'+title+'</td>'
@@ -429,8 +431,10 @@ function update_recommend(){
 			let title = course[3];
 			let instructor = course[2];
 			let time = course[8];
+			let gpa = course[6];
+			let in_rate = course[4];
 			let crn = course[0];
-			let p = '\''+course_number+'\',\''+title+'\',\''+instructor+'\',\''+time+'\',\''+crn+'\',\'minor\'';
+			let p = '\''+course_number+'\',\''+title+'\',\''+instructor+'\',\''+time+'\',\''+crn+'\',\''+gpa+'\',\''+in_rate+'\',\'major\'';
 			str += '<tr style="cursor:pointer;" onclick="show_details('+p+')">'
 					+ '<td class="animated flipInX" style="animation-delay: 0.'+i+'s;">'+course_number+'</td>'
 					+ '<td class="animated flipInX" style="animation-delay: 0.'+i+'s;">'+title+'</td>'
@@ -454,7 +458,7 @@ function get_recommend(data){
 	}
 
 }
-function show_details(course_number,title,instructor,time,crn,major){
+function show_details(course_number,title,instructor,time,crn,gpa=3.0,in_rate=4.0,major){
 	var container = document.getElementById("inside_overlay");
 	container.innerHTML = '<i class="contact3-form-title material-icons" style="float:right;margin-right:20%;cursor:pointer;font-size:30px;" title="Go back" onclick="document.getElementById(\'overlay\').style = \'width:0;\'">&#xe5c4;</i>'
 							+ '<div style="font-size:40px;font-family: Poppins-Bold;">'+course_number+'</div>'
@@ -462,6 +466,8 @@ function show_details(course_number,title,instructor,time,crn,major){
 							+ '<div class="col-sm-12">Title: '+title+'</div>'
 							+ '<div class="col-sm-12">CRN: '+crn+'</div>'
 							+ '<div class="col-sm-12">Instructor: '+instructor+'</div>'
+							+ '<div class="col-sm-12">Instructor Rating: '+in_rate+'</div>'
+							+ '<div class="col-sm-12">GPA: '+gpa+'</div>'
 							+ '<div class="col-sm-12">Time: '+time+'</div>'
 							+ '<div class="col-sm-12" style="padding-top:20px;"><button class="contact3-form-btn" onclick="add_to_courselist(\''+crn+'\',\''+major+'\');">Add this course</button></div>'
 							+ '</div>';
