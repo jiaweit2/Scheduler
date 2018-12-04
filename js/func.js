@@ -8,7 +8,7 @@ var glob_data;
 var major_data;
 var minor_data;
 var curr_view = "overview";
-var BACK_END_LOC = "http//csscheduler.web.illinois.edu/";
+var BACK_END_LOC = "http://csscheduler.web.illinois.edu/";
 var daydict = {'M':'Monday','T':'Tuesday','W':'Wednesday','R':'Thursday','F':'Friday'};
 // var BACK_END_LOC = "http://192.168.0.101:7777/";
 
