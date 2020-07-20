@@ -1,2 +1,2 @@
 # CS scheduler Web App
-@ http://csscheduler.tk
+https://www.youtube.com/watch?v=W1uWUVo-IOk
